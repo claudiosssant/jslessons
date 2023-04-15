@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detector de Brazuca!</title>
+</head>
+<body>
+    <h1>Tu é brasileiro ou não?</h1>
+    Qual seu país? <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res">
+
+    </div>
+
+
+    <script>
+        function calcular(){
+            var pais = document.getElementById('txtpais'.value);
+            var res = document.querySelector('div#res');
+
+            if(pais == 'Brasil'){
+                res.innerHTML = `<p>Você é Brazuca!</p>`;
+            }else {
+                res.innerHTML = `<p>Você é estrangeiro!</p>`;
+            }
+            }
+    </script>
+</body>
+</html>
