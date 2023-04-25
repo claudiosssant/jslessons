@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My To Do</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Meu To Do</h1>
+      </header>
+      <form action="" id="todo-form">
+        <p>Adicione uma tarefa:</p>
+        <div class="form-container">
+          <input type="text" id="todo-input" placeholder="Qual a boa?" />
+          <button type="submit">
+            <i class="fa-thin fa-plus"></i>
+          </button>
+        </div>
+      </form>
+      <form id="edit">
+        <p>Edite sua tarefa:</p>
+        <div class="form-control">
+            <input type="text" id="edit-input">
+            <button type="submit">
+                <i class="fa-solid fa-check-double"></i>
+            </button>
+        </div>
+      </form>
+      <div id="toolbar">
+        <div class="search">
+            <h4>Pesquisar:</h4>
+            <form>
+                <input type="text" id="search-input">
+                <button id="erase">
+                    <i class="fa-solid fa-delete-left"></i>
+                </button>
+            </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
