@@ -62,7 +62,7 @@ input, select {
 .container header {
     text-align: center;
     padding: 0 1rem 1rem;
-    border: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -141,4 +141,11 @@ input, select {
 
 .todo button {
     margin-left: .4rem;
+}
+
+.done h3 {
+    color: #fdfdfd;
+    background-color: #395169;
+    text-decoration: line-through;
+    font-style: italic;
 }
