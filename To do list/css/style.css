@@ -1,21 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&display=swap');
+
 * {
     padding: 0;
     margin: 0;
-    color: #000000;
+    color: #f2f2f2;
     box-sizing: border-box;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Chakra Petch', sans-serif;
 }
 
 body {
-   background-image: url("https://images.pexels.com/photos/2565420/pexels-photo-2565420.jpeg");
-   background-position: center;
-   background-size: cover;
+    height: 100vh;
+    background: linear-gradient(45deg, #29132e, #321450, #860029, #de004e, #f887ff);
+    background-size: 300% 300%;
+    animation: color 12s ease-in-out infinite;
+}
+
+@keyframes color {
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
 }
 
 button {
     background-color: #fdfdfd;
-    color: #102F5e;
-    border: 2px solid #102f5e;
+    color: #362065;
+    border: 2px solid #000000;
     padding: .3rem .6rem;
     font-size: 1.5rem;
     cursor: pointer;
@@ -54,7 +69,7 @@ input, select {
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     backdrop-filter: blur( 4px );
     -webkit-backdrop-filter: blur( 4px );
-    border-radius: 10px;
+    border-radius: 2px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     padding: 1.5rem;
 }
