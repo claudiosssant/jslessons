@@ -3,7 +3,7 @@
 * {
     padding: 0;
     margin: 0;
-    color: #f2f2f2;
+    color: #000000;
     box-sizing: border-box;
     font-family: 'Chakra Petch', sans-serif;
 }
@@ -41,7 +41,7 @@ button {
 }
 
 button:hover {
-    background-color: #102f5e;
+    background-color: #0a0a0a;
 }
 
 button:hover > i {
@@ -49,7 +49,7 @@ button:hover > i {
 }
 
 button i {
-    color: #102f5e;
+    color: #070707;
     font-weight: bold;
     pointer-events: none;
 }
@@ -160,7 +160,7 @@ input, select {
 
 .done h3 {
     color: #fdfdfd;
-    background-color: #395169;
+    background-color: #020202;
     text-decoration: line-through;
     font-style: italic;
 }
