@@ -28,8 +28,18 @@ console.log(alimentos)
 
 
 
-//array reduce 
+//array reduce, serve para transformar um array, mudando seu valor.
 
+const numeros = [0, 2, 7, 8, 9];
+
+//no primeiro momento o acumulador é o primeiro item da lista e o numeroAtual o segundo!
+
+const total = numeros.reduce(function(acumulador, numeroAtual){
+    return acumulador + numeroAtual
+
+})
+
+console.log(total);
 
 
 
