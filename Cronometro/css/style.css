@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap');
 
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Teko', sans-serif;
 }
 
 .container {
@@ -17,14 +17,15 @@
 }
 
 .container h1 {
-  color: #175dff
+  color: #545788;
+  font-size: 70px;
 }
 
 .timer {
   display: flex;
   font-size: 55px;
   font-weight: bold;
-  color: #172951
+  color: #0000;
 }
 
 .time {
@@ -32,7 +33,7 @@
   align-items: center;
   justify-content: center;
   margin-right: 10px;
-  color: #172951;
+  color: #0000;
   min-width: 90px;
 }
 
@@ -54,12 +55,13 @@
 
 .btn {
   padding: 10px;
-  font-size: 8px;
+  font-size: 18px;
   font-weight: bold;
   border-radius: 30px;
   cursor: pointer;
   border: 1px solid #ccc;
   transition: all .2s ease-in-out;
+  width: 100px;
 }
 
 .btn:hover {
@@ -68,7 +70,7 @@
 }
 
 #startBtn {
-  background-color: #175cff
+  background-color: #175cff;
   color: #f2f2f2;
 }
 

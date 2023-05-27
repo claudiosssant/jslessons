@@ -6,7 +6,22 @@ const pauseBtn = document.querySelector('#pauseBtn')
 const resetBtn = document.querySelector('#resetBtn')
 const resumeBtn = document.querySelector('#resumeBtn')
 
+
+let interval;
 let minutes = 0;
 let seconds = 0;
 let milliseconds = 0;
 let isPaused = false;
+
+startBtn.addEventListener('click', startTimer);
+
+function startTimer() {
+  interval = setInterval(() => {
+
+    if(lisPaused) {
+      
+    }
+
+
+  }, 10)
+}
