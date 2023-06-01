@@ -6,7 +6,6 @@ const pauseBtn = document.querySelector('#pauseBtn')
 const resetBtn = document.querySelector('#resetBtn')
 const resumeBtn = document.querySelector('#resumeBtn')
 
-
 let interval;
 let minutes = 0;
 let seconds = 0;
@@ -18,10 +17,31 @@ startBtn.addEventListener('click', startTimer);
 function startTimer() {
   interval = setInterval(() => {
 
-    if(lisPaused) {
+    if(!isPaused) {
       
+      milliseconds += 10
+
+      if(milliseconds === 1000){
+        seconds++;
+        milliseconds = 0;
+      }
+
+      if(seconds === 60){
+        minutes++;
+        seconds = 0;
+      }
+      minutesEl.textContent = formatTime(minutes);
+      secondsEl.textContent = formatTime(seconds);
+      millisecondsEl.textContent = formatMilliseconds(milliseconds);
     }
 
-
   }, 10)
+}
+
+function formatTime(time) {
+  return time < 10 ? `0${time}` : time;
+}
+
+function formatMilliseconds(time) {
+  return time < 100 ? time.padStart(3, "0") : time;
 }
