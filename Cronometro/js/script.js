@@ -13,6 +13,9 @@ let milliseconds = 0;
 let isPaused = false;
 
 startBtn.addEventListener('click', startTimer);
+pauseBtn.addEventListener('click', pauseTimer);
+resumeBtn.addEventListener('click', resumeTimer);
+resetBtn.addEventListener('click', resetTimer);
 
 function startTimer() {
   interval = setInterval(() => {
@@ -35,7 +38,38 @@ function startTimer() {
       millisecondsEl.textContent = formatMilliseconds(milliseconds);
     }
 
-  }, 10)
+  }, 10);
+
+  startBtn.style.display = "none";
+  pauseBtn.style.display = "block";
+}
+
+function pauseTimer() {
+  isPaused = true
+  pauseBtn.style.display = "none"
+  resumeBtn.style.display = "block"
+}
+
+function resumeTimer() {
+  isPaused = false
+  pauseBtn.style.display = "block"
+  resumeBtn.style.display = "none"
+}
+
+function resetTimer() {
+  clearInterval(interval);
+  minutes = 0;
+  seconds = 0;
+  milliseconds = 0;
+  
+
+  minutesEl.textContent = "00";
+  secondsEl.textContent = "00";
+  millisecondsEl.textContent = "000";
+  
+  startBtn.style.display = "block";
+  pauseBtn.style.display = "none";
+  resumeBtn.style.display = "none";
 }
 
 function formatTime(time) {
@@ -43,5 +77,5 @@ function formatTime(time) {
 }
 
 function formatMilliseconds(time) {
-  return time < 100 ? time.padStart(3, "0") : time;
+  return time < 100 ? `${time}`.padStart(3, "0") : time;
 }
